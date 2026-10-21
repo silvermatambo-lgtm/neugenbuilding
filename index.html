@@ -27,6 +27,30 @@
 .galleryItem.mediaMissing:before{content:'Photo being published';position:absolute;z-index:2;left:12px;top:12px;color:white;font-size:11px;background:#141b28bb;padding:5px 9px;border-radius:4px}
 .activePage{color:#ff8790!important}
 @media(max-width:750px){.pageLead{padding:135px 0 65px}.pageLead p{font-size:16px}.homePreview{grid-template-columns:1fr}.homePreview img{height:240px}}
+
+/* NewGen homepage featured projects — full-resolution portfolio photos */
+.featuredWork{background:#fff}
+.featuredWorkHead{max-width:780px;margin:0 auto 34px;text-align:center}
+.featuredWorkHead h2{margin:10px 0 14px}
+.featuredWorkHead .lead{margin-left:auto;margin-right:auto}
+.featuredWorkGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.featuredWorkCard{display:block;overflow:hidden;border:1px solid #e8e9ec;border-radius:17px;background:#fff;box-shadow:0 10px 30px #16202a10;transition:transform .25s ease,box-shadow .25s ease}
+.featuredWorkCard:hover,.featuredWorkCard:focus-visible{transform:translateY(-5px);box-shadow:0 17px 38px #16202a24}
+.featuredWorkCard:focus-visible{outline:3px solid #db2435;outline-offset:3px}
+.featuredWorkImage{position:relative;display:block;overflow:hidden;aspect-ratio:4/3;background:#e7e9ec}
+.featuredWorkImage img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.featuredWorkCard:hover .featuredWorkImage img{transform:scale(1.045)}
+.featuredWorkCount{position:absolute;top:15px;left:15px;background:#171b21de;border:1px solid #ffffff4d;border-radius:5px;padding:5px 10px;font-size:11px;font-weight:800;letter-spacing:.08em;color:#fff}
+.featuredWorkDetails{display:flex;flex-direction:column;align-items:flex-start;min-height:168px;padding:23px 22px 20px}
+.featuredWorkCategory{color:#b50d1a;font-weight:800;letter-spacing:.09em;text-transform:uppercase;font-size:10px;margin-bottom:9px}
+.featuredWorkDetails strong{font:800 clamp(19px,2vw,23px)/1.2 Outfit,system-ui,sans-serif;color:#18202b}
+.featuredWorkAction{margin-top:auto;padding-top:16px;font-size:13px;font-weight:800;color:#ac0b18}
+.featuredWorkAction span{font-size:19px;margin-left:5px}
+.featuredWorkFooter{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:29px;padding:24px 27px;background:#f6f7f8;border-radius:13px}
+.featuredWorkFooter p{max-width:650px;color:#536073;margin:0;font-size:15px}
+.featuredWorkFooter .btn{flex:none}
+@media(max-width:950px){.featuredWorkGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}}
+@media(max-width:700px){.featuredWorkGrid{grid-template-columns:1fr}.featuredWorkHead{margin-bottom:25px}.featuredWorkCard{max-width:620px;width:100%;margin:0 auto}.featuredWorkImage{aspect-ratio:16/10}.featuredWorkDetails{min-height:145px}.featuredWorkFooter{flex-direction:column;align-items:stretch;padding:22px}.featuredWorkFooter .btn{width:100%}}
 </style></head><body>
 <a href="#main" class="skip">Skip to content</a><div class="bar"></div>
 <header id="header"><div class="container head"><a href="/" class="brand" aria-label="NewGen home">
@@ -35,7 +59,56 @@
 <nav class="nav" id="nav" aria-label="Primary navigation"><a href="/">Home</a><a href="/about">About</a><a href="/services">Services</a><a href="/projects">Our Work</a><a href="/faq">FAQ</a><a href="/contact" class="btn">Get a Quote ↗</a></nav>
 <button class="menuButton" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button></div></header>
 <main id="main"><section class="hero" id="home"><div class="heroPhoto"></div><div class="container"><span class="eyebrow" style="color:#ff5e69">WELCOME TO NEWGEN BUILDING SOLUTIONS</span><h1 id="heroTitle">Built on solid foundations.<em>Made to last.</em></h1><p id="heroDesc">Residential building, renovations and practical construction solutions. See actual project work and let us discuss your next build.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><a href="/projects" class="btn">Explore our work <span class="heroArrow">→</span></a><a href="/contact" class="btn outline">Request a quote</a></div><div class="heroChips"><span>Residential construction</span><span>Roofing & brickwork</span><span>Foundations & paving</span></div></div><div class="heroBottom"><div class="container"><small>01 / NewGen Building Projects</small><div class="heroControls"><button id="prevHero" aria-label="Previous headline">‹</button><button id="nextHero" aria-label="Next headline">›</button></div></div></div></section><div class="trust"><div class="container trustGrid"><div><strong>✓</strong> Building solutions</div><div><strong>⌂</strong> Residential & property work</div><div><strong>✦</strong> Practical project enquiries</div></div></div>
-<section class="section alternate" id="services"><div class="container"><div class="sectHead"><span class="eyebrow">WHAT WE DO</span><h2>Building services with purpose.</h2><p class="lead">From groundwork and structures to roofing, paving and interior finishes, we help bring construction plans to life.</p></div><div class="serviceGrid" id="servicesGrid"></div></div></section><section class="section"><div class="container"><div class="sectHead"><span class="eyebrow">PROJECT GALLERY</span><h2>See our work.</h2><p class="lead">Browse photos of NewGen construction work on the dedicated Projects page.</p></div><div class="homePreview"><a href="/projects"><img src="/assets/hero.jpg" alt="A NewGen building construction project"><strong>Explore actual building projects →</strong></a><div class="homePreviewCopy"><h3>From site preparation to final finishes</h3><p>See our portfolio, including residential building, roof construction, brickwork, paving and structural work.</p><a href="/projects" class="btn">View full gallery →</a></div></div></div></section><section class="cta"><div class="container"><h2>Let's build something that lasts.</h2><p>Residential building • Roofing • Paving • Brickwork • Renovations</p><a class="btn white" href="https://wa.me/27836218351?text=Hello%20NewGen%2C%20I%20would%20like%20to%20request%20a%20quote." target="_blank" rel="noopener">WhatsApp our team →</a></div></section></main>
+<section class="section alternate" id="services"><div class="container"><div class="sectHead"><span class="eyebrow">WHAT WE DO</span><h2>Building services with purpose.</h2><p class="lead">From groundwork and structures to roofing, paving and interior finishes, we help bring construction plans to life.</p></div><div class="serviceGrid" id="servicesGrid"></div></div></section>
+<section class="section featuredWork" id="featured-work" aria-labelledby="featured-work-heading">
+  <div class="container">
+    <div class="sectHead featuredWorkHead">
+      <span class="eyebrow">FEATURED PROJECTS</span>
+      <h2 id="featured-work-heading">Real work. Real results.</h2>
+      <p class="lead">Take a closer look at three examples of NewGen's building and construction work. Explore our complete gallery for more on-site photographs.</p>
+    </div>
+    <div class="featuredWorkGrid">
+      <a class="featuredWorkCard" href="/projects" aria-label="Explore our residential building and roofing projects">
+        <span class="featuredWorkImage">
+          <img src="/assets/project-05.webp" alt="Residential building project with pitched metal roof, brick walls and a covered veranda" loading="lazy" decoding="async" width="1200" height="900">
+          <span class="featuredWorkCount">01 / 03</span>
+        </span>
+        <span class="featuredWorkDetails">
+          <span class="featuredWorkCategory">Residential Building</span>
+          <strong>House Construction &amp; Roofing</strong>
+          <span class="featuredWorkAction">See our projects <span aria-hidden="true">↗</span></span>
+        </span>
+      </a>
+      <a class="featuredWorkCard" href="/projects" aria-label="Explore our paving projects">
+        <span class="featuredWorkImage">
+          <img src="/assets/project-04.webp" alt="Red and charcoal interlocking brick paving installed along a building's entrance and walkway" loading="lazy" decoding="async" width="1200" height="900">
+          <span class="featuredWorkCount">02 / 03</span>
+        </span>
+        <span class="featuredWorkDetails">
+          <span class="featuredWorkCategory">Paving &amp; External Works</span>
+          <strong>Decorative Brick Paving</strong>
+          <span class="featuredWorkAction">See our projects <span aria-hidden="true">↗</span></span>
+        </span>
+      </a>
+      <a class="featuredWorkCard" href="/projects" aria-label="Explore our foundation and site preparation projects">
+        <span class="featuredWorkImage">
+          <img src="/assets/project-13.webp" alt="Construction site with excavated trenches and concrete foundations being prepared" loading="lazy" decoding="async" width="1200" height="900">
+          <span class="featuredWorkCount">03 / 03</span>
+        </span>
+        <span class="featuredWorkDetails">
+          <span class="featuredWorkCategory">Groundworks &amp; Foundations</span>
+          <strong>Foundation &amp; Site Works</strong>
+          <span class="featuredWorkAction">See our projects <span aria-hidden="true">↗</span></span>
+        </span>
+      </a>
+    </div>
+    <div class="featuredWorkFooter">
+      <p>These are photographs from our construction portfolio. Discover more building, brickwork, roofing, paving and renovation projects.</p>
+      <a href="/projects" class="btn">View Our Full Gallery <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+<section class="cta"><div class="container"><h2>Let's build something that lasts.</h2><p>Residential building • Roofing • Paving • Brickwork • Renovations</p><a class="btn white" href="https://wa.me/27836218351?text=Hello%20NewGen%2C%20I%20would%20like%20to%20request%20a%20quote." target="_blank" rel="noopener">WhatsApp our team →</a></div></section></main>
 <footer><div class="container"><div class="ftgrid"><div><a class="brand" href="/"><svg viewBox="0 0 100 80" aria-hidden="true"><path fill="#cb1421" d="M2 43 28 17l15 14L66 5l32 37-8 0-24-27-23 27-15-15L10 43Z"/><path stroke="#17191f" fill="none" stroke-width="4" d="M5 48h19L28 26l14 20L66 14l25 33h6"/></svg><span><span class="brandName">New<b>Gen</b></span><span class="brandSub">Building Solutions & Projects</span></span></a><p>NewGen Building Solutions and Projects (Pty) Ltd offers construction, roofing, paving, masonry, renovations and building-related services.</p><p class="socialProof">Registration: 2021/696139/07<br>NHBRC registration: 4000015582</p></div><div><h3>Explore</h3><a href="/">Home</a><a href="/about">About Us</a><a href="/services">Our Services</a><a href="/projects">Project Gallery</a><a href="/faq">FAQ</a><a href="/contact">Contact</a></div><div><h3>Contact details</h3><a href="tel:+27836218351">+27 83 621 8351</a><a href="mailto:info@neugenbuilding.co.za">info@neugenbuilding.co.za</a><a href="https://www.neugenbuilding.co.za">www.neugenbuilding.co.za</a><a href="https://wa.me/27836218351">WhatsApp Enquiries</a></div></div><div class="copyright"><span>© <span id="year"></span> NewGen Building Solutions and Projects. All rights reserved.</span><span>Website designed by <a style="display:inline;color:#fff" href="https://webdevpro.co.za" target="_blank" rel="noopener">WebDevPro</a></span></div></div></footer>
 <button class="floatChat" id="chatToggle" aria-label="Open WhatsApp assistant">◉</button><div class="chatBox" id="chatBox"><div class="chatHead">NewGen • WhatsApp Assistant <button style="float:right;border:0;background:none;color:#fff;font-size:20px" id="chatClose" aria-label="Close">×</button></div><form class="chatBody" id="chatForm"><p>Hello 👋 Welcome to NewGen. Share your details and we'll prepare a WhatsApp enquiry.</p><input name="name" placeholder="Your name" aria-label="Your name" required><input name="phone" type="tel" placeholder="Phone number" aria-label="Phone number" required><select name="service" aria-label="Service" required><option value="">Select a service</option><option>Residential construction</option><option>Brickwork</option><option>Roofing</option><option>Paving</option><option>Renovations</option><option>Foundations</option><option>General enquiry</option></select><textarea name="message" placeholder="Describe your project..." aria-label="Project details" rows="3" required></textarea><button class="btn" type="submit">Open WhatsApp →</button></form></div><button class="backTop" id="backTop" aria-label="Back to top">↑</button><div class="lightbox" id="lightbox"><button id="lightboxClose" aria-label="Close photo viewer">×</button><img id="lightboxImage" alt="Enlarged project photo"></div>
 <script>
