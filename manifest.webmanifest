@@ -1,0 +1,16 @@
+{
+  "name": "NewGen Building Solutions and Projects",
+  "short_name": "NewGen",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#be101c",
+  "background_color": "#151820",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
