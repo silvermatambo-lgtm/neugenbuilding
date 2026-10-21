@@ -3,7 +3,7 @@
 <meta name="description" content="NewGen Building Solutions and Projects offers residential building, roofing, brickwork, foundations, paving and renovation services. View our work and request a quote.">
 <meta name="theme-color" content="#bd111d"><meta name="robots" content="index,follow"><meta property="og:title" content="NewGen Building Solutions and Projects">
 <meta property="og:description" content="Building with purpose. Creating with pride."><meta property="og:type" content="website">
-<link rel="manifest" href="/manifest.webmanifest"><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preload" as="image" href="/assets/project-05.webp" fetchpriority="high"><link rel="manifest" href="/manifest.webmanifest"><link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -58,7 +58,7 @@
 <span><span class="brandName">New<b>Gen</b></span><span class="brandSub">Building Solutions & Projects</span></span></a>
 <nav class="nav" id="nav" aria-label="Primary navigation"><a href="/">Home</a><a href="/about">About</a><a href="/services">Services</a><a href="/projects">Our Work</a><a href="/faq">FAQ</a><a href="/contact" class="btn">Get a Quote ↗</a></nav>
 <button class="menuButton" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button></div></header>
-<main id="main"><section class="hero" id="home"><div class="heroPhoto"></div><div class="container"><span class="eyebrow" style="color:#ff5e69">WELCOME TO NEWGEN BUILDING SOLUTIONS</span><h1 id="heroTitle">Built on solid foundations.<em>Made to last.</em></h1><p id="heroDesc">Residential building, renovations and practical construction solutions. See actual project work and let us discuss your next build.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><a href="/projects" class="btn">Explore our work <span class="heroArrow">→</span></a><a href="/contact" class="btn outline">Request a quote</a></div><div class="heroChips"><span>Residential construction</span><span>Roofing & brickwork</span><span>Foundations & paving</span></div></div><div class="heroBottom"><div class="container"><small>01 / NewGen Building Projects</small><div class="heroControls"><button id="prevHero" aria-label="Previous headline">‹</button><button id="nextHero" aria-label="Next headline">›</button></div></div></div></section><div class="trust"><div class="container trustGrid"><div><strong>✓</strong> Building solutions</div><div><strong>⌂</strong> Residential & property work</div><div><strong>✦</strong> Practical project enquiries</div></div></div>
+<main id="main"><section class="hero" id="home"><div class="heroPhoto heroSlideImage is-active" data-hero-image="0" style="background-image:url('/assets/project-05.webp')" aria-hidden="true"></div><div class="heroPhoto heroSlideImage" data-hero-image="1" style="background-image:url('/assets/project-04.webp')" aria-hidden="true"></div><div class="heroPhoto heroSlideImage" data-hero-image="2" style="background-image:url('/assets/project-13.webp')" aria-hidden="true"></div><div class="container"><span class="eyebrow" style="color:#ff5e69">WELCOME TO NEWGEN BUILDING SOLUTIONS</span><h1 id="heroTitle">Built on solid foundations.<em>Made to last.</em></h1><p id="heroDesc">Residential building, renovations and practical construction solutions. See actual project work and let us discuss your next build.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><a href="/projects" class="btn">Explore our work <span class="heroArrow">→</span></a><a href="/contact" class="btn outline">Request a quote</a></div><div class="heroChips"><span>Residential construction</span><span>Roofing & brickwork</span><span>Foundations & paving</span></div></div><div class="heroBottom"><div class="container"><small>01 / NewGen Building Projects</small><div class="heroDots" aria-label="Choose a hero photograph"><button class="is-active" type="button" data-hero-dot="0" aria-pressed="true" aria-label="Show house construction photo"></button><button type="button" data-hero-dot="1" aria-pressed="false" aria-label="Show paving photo"></button><button type="button" data-hero-dot="2" aria-pressed="false" aria-label="Show foundation photo"></button></div><div class="heroControls"><button id="prevHero" aria-label="Previous hero slide">‹</button><button id="nextHero" aria-label="Next hero slide">›</button></div></div></div></section><div class="trust"><div class="container trustGrid"><div><strong>✓</strong> Building solutions</div><div><strong>⌂</strong> Residential & property work</div><div><strong>✦</strong> Practical project enquiries</div></div></div>
 <section class="section alternate" id="services"><div class="container"><div class="sectHead"><span class="eyebrow">WHAT WE DO</span><h2>Building services with purpose.</h2><p class="lead">From groundwork and structures to roofing, paving and interior finishes, we help bring construction plans to life.</p></div><div class="serviceGrid" id="servicesGrid"></div></div></section>
 <section class="section featuredWork" id="featured-work" aria-labelledby="featured-work-heading">
   <div class="container">
@@ -150,8 +150,36 @@ const projectNames=[
 ['Residential building exterior','Residential construction'],['External wall installation','Building systems'],['Covered entrance and verandah','Construction'],['Decorative paved entrance','Paving'],['Roof and exterior project','Roofing'],['Face-brick masonry','Brickwork'],['Interior wall preparation','Renovations'],['Timber framing','Carpentry'],['Wall finishing work','Interiors'],['Metal-roof project','Roofing'],['Foundation reinforcement','Foundations'],['Brickwork details','Masonry'],['Foundation work','Groundworks'],['On-site building team','Construction']];
 if(document.getElementById('galleryGrid'))document.getElementById('galleryGrid').innerHTML=projectNames.map((p,i)=>'<button type="button" class="galleryItem" aria-label="View '+p[0]+'" data-photo="'+String(i+1).padStart(2,'0')+'"><img alt="'+p[0]+'" loading="lazy" src="/assets/project-'+String(i+1).padStart(2,'0')+'.webp" onerror="this.onerror=null;this.src=\'/assets/hero.jpg\';this.closest(\'.galleryItem\').classList.add(\'mediaMissing\')"><span class="galleryLabel"><small>'+p[1]+'</small>'+p[0]+'</span></button>').join('');
 const menu=document.getElementById('menuButton'),nav=document.getElementById('nav');menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});nav?.querySelectorAll('a').forEach(x=>x.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));window.addEventListener('scroll',()=>document.getElementById('header').classList.toggle('scrolled',window.scrollY>20),{passive:true});
+
 if(document.getElementById('heroTitle')){
-const slides=[['Built on solid foundations.','Made to last.','Residential building, renovations and practical construction solutions. See actual project work and let us discuss your next build.'],['From the ground up.','Every detail matters.','From brickwork and structures to roofing and finishes, discover practical building services.'],['Precision you can see.','Work with purpose.','Talk to NewGen about paving, masonry and building work for your next property project.']];let current=0;function renderSlide(){const s=slides[current];document.getElementById('heroTitle').innerHTML=s[0]+'<em>'+s[1]+'</em>';document.getElementById('heroDesc').textContent=s[2];document.querySelector('.heroBottom small').textContent='0'+(current+1)+' / NewGen Building Projects'};document.getElementById('prevHero').onclick=()=>{current=(current+slides.length-1)%slides.length;renderSlide()};document.getElementById('nextHero').onclick=()=>{current=(current+1)%slides.length;renderSlide()};setInterval(()=>{if(document.visibilityState!=='visible')return;current=(current+1)%slides.length;renderSlide()},7200);
+const slides=[
+ ['Built on solid foundations.','Made to last.','Residential construction and roofing for a home built to last. Explore our real building projects and start planning your next build.'],
+ ['From the ground up.','Every detail matters.','From decorative brick paving to outdoor surfaces and finishing touches, discover what careful workmanship can achieve.'],
+ ['Precision you can see.','Work with purpose.','Explore our foundation and site preparation projects — because every great build begins with the groundwork.']
+];
+const photos=Array.from(document.querySelectorAll('[data-hero-image]'));
+const dots=Array.from(document.querySelectorAll('[data-hero-dot]'));
+let current=0, interval;
+function renderSlide(){
+ const s=slides[current];
+ photos.forEach((img,i)=>{img.classList.toggle('is-active',i===current)});
+ dots.forEach((dot,i)=>{dot.classList.toggle('is-active',i===current);dot.setAttribute('aria-pressed',String(i===current))});
+ document.getElementById('heroTitle').innerHTML=s[0]+'<em>'+s[1]+'</em>';
+ document.getElementById('heroDesc').textContent=s[2];
+ const label=document.querySelector('.heroBottom small');
+ if(label)label.textContent='0'+(current+1)+' / 03 · NewGen Building Projects';
+}
+function changeSlide(to){
+ current=(to+slides.length)%slides.length;
+ renderSlide();
+ if(interval)clearInterval(interval);
+ interval=setInterval(()=>{if(document.visibilityState==='visible')changeSlide(current+1)},7200);
+}
+document.getElementById('prevHero').addEventListener('click',()=>changeSlide(current-1));
+document.getElementById('nextHero').addEventListener('click',()=>changeSlide(current+1));
+dots.forEach((btn,i)=>btn.addEventListener('click',()=>changeSlide(i)));
+interval=setInterval(()=>{if(document.visibilityState==='visible')changeSlide(current+1)},7200);
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible' && interval){clearInterval(interval);interval=setInterval(()=>changeSlide(current+1),7200)}});
 }
 function openWA(data){const msg='Hello NewGen Building Solutions, please assist me.\nName: '+data.name+'\nPhone: '+data.phone+'\nService: '+data.service+'\nProject: '+data.message;window.open('https://wa.me/27836218351?text='+encodeURIComponent(msg),'_blank','noopener,noreferrer')};
 for(const id of ['quoteForm','chatForm'])document.getElementById(id)?.addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;if(!f.reportValidity())return;openWA(Object.fromEntries(new FormData(f).entries()));if(id==='chatForm')document.getElementById('chatBox').classList.remove('open')});

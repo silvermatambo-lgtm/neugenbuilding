@@ -80,3 +80,39 @@ html{scroll-behavior:smooth}
  .flipCard .flipInner{transform:none!important}
  .flipBack{display:none}
 }
+
+
+/* NewGen hero gallery — three original project photographs. */
+.hero{background:#171d25}
+.hero .heroSlideImage{
+ background-color:#20252d;background-repeat:no-repeat;background-size:cover;
+ background-position:center center;opacity:0;visibility:hidden;
+ transform:scale(1.012);animation:none;
+ transition:opacity 1.3s ease-in-out,visibility 1.3s ease-in-out,transform 9s linear;
+ will-change:opacity;
+}
+.hero .heroSlideImage[data-hero-image="0"]{background-position:center 48%}
+.hero .heroSlideImage[data-hero-image="1"]{background-position:center 56%}
+.hero .heroSlideImage[data-hero-image="2"]{background-position:center 54%}
+.hero .heroSlideImage.is-active{opacity:1;visibility:visible;transform:scale(1.045);z-index:-2}
+.hero .heroSlideImage:not(.is-active){z-index:-3}
+.hero .heroPhoto{animation:none}
+.hero::after{background:linear-gradient(90deg,rgba(5,10,18,.92) 0%,rgba(8,13,22,.76) 39%,rgba(10,16,27,.33) 78%,rgba(10,16,27,.24) 100%),linear-gradient(0deg,rgba(4,9,17,.62),transparent 37%)}
+.heroDots{display:flex;gap:7px;align-items:center;justify-content:center;margin-left:auto}
+.heroDots button{display:block;border-radius:99px;border:1px solid #ffffffb4;background:#fff6;min-width:11px;width:11px;height:11px;padding:0;transition:width .3s ease,background-color .3s ease}
+.heroDots button.is-active{width:29px;background:#fa3849;border-color:#fa3849}
+.heroDots button:focus-visible{outline:2px solid white;outline-offset:3px}
+.heroControls button{transition:background .2s,border-color .2s}
+.heroControls button:hover{background:#be101c;border-color:#be101c}
+@media(max-width:700px){
+ .hero .heroSlideImage[data-hero-image="0"]{background-position:55% center}
+ .hero .heroSlideImage[data-hero-image="1"]{background-position:54% center}
+ .hero .heroSlideImage[data-hero-image="2"]{background-position:48% center}
+ .hero::after{background:linear-gradient(90deg,rgba(6,11,20,.91),rgba(6,11,20,.6)),linear-gradient(0deg,#060b14b3,transparent 50%)}
+ .heroBottom .container{flex-wrap:wrap;row-gap:9px}
+ .heroDots{margin-left:auto}
+}
+@media(max-width:370px){.heroBottom small{display:none}}
+@media(prefers-reduced-motion:reduce){
+ .hero .heroSlideImage{transition:none!important;transform:none!important}
+}
