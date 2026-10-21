@@ -27,7 +27,7 @@
 .galleryItem.mediaMissing:before{content:'Photo being published';position:absolute;z-index:2;left:12px;top:12px;color:white;font-size:11px;background:#141b28bb;padding:5px 9px;border-radius:4px}
 .activePage{color:#ff8790!important}
 @media(max-width:750px){.pageLead{padding:135px 0 65px}.pageLead p{font-size:16px}.homePreview{grid-template-columns:1fr}.homePreview img{height:240px}}
-</style></head><body>
+</style><link rel="stylesheet" href="/newgen-motion.css"></head><body>
 <a href="#main" class="skip">Skip to content</a><div class="bar"></div>
 <header id="header"><div class="container head"><a href="/" class="brand" aria-label="NewGen home">
 <svg viewBox="0 0 100 80" role="img" aria-label="NewGen roof logo"><path fill="#cb1421" d="M2 43 28 17l15 14L66 5l32 37-8 0-24-27-23 27-15-15L10 43Z"/><path stroke="#17191f" fill="none" stroke-width="4" d="M5 48h19L28 26l14 20L66 14l25 33h6"/><rect x="31" y="42" width="13" height="13" rx="2"/><path d="M38 42v13M31 48h13" stroke="#fff" stroke-width="2"/><rect x="65" y="42" width="13" height="13" rx="2"/><path d="M72 42v13M65 48h13" stroke="#fff" stroke-width="2"/><path fill="#be101c" d="M26 69h51v4H26Z"/></svg>
@@ -63,4 +63,4 @@ const modal=document.getElementById('lightbox'),mi=document.getElementById('ligh
 const vid=document.getElementById('projectVideo');vid?.addEventListener('error',()=>{vid.style.display='none';document.getElementById('videoFallback').style.display='block'},true);
 if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));
 
-const activePath=location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';document.querySelectorAll('.nav a').forEach(a=>{if(new URL(a.href).pathname===activePath)a.classList.add('activePage')});</script></body></html>
+const activePath=location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';document.querySelectorAll('.nav a').forEach(a=>{if(new URL(a.href).pathname===activePath)a.classList.add('activePage')});</script><script src="/newgen-motion.js" defer></script></body></html>
