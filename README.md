@@ -1,4 +1,4 @@
-# NewGen Building Solutions and Projects
+# Neugen Building Solutions and Projects
 
 **Live website:** https://neugenbuilding.vercel.app  
 **Production branch:** `main`  
@@ -6,7 +6,7 @@
 
 ## About
 
-NewGen Building Solutions and Projects (Pty) Ltd — residential construction, roofing, brickwork, paving, renovations, and foundation services.
+Neugen Building Solutions and Projects (Pty) Ltd — residential construction, roofing, brickwork, paving, renovations, and foundation services.
 
 - Phone / WhatsApp: +27 83 621 8351
 - Email: info@neugenbuilding.co.za

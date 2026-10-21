@@ -1,5 +1,5 @@
 
-/* NewGen 2026 motion and mobile enhancements. Shared across every page. */
+/* Neugen 2026 motion and mobile enhancements. Shared across every page. */
 :root{--motion-ease:cubic-bezier(.22,1,.36,1)}
 html{scroll-behavior:smooth}
 :focus-visible{outline:3px solid #ff6b78;outline-offset:4px}
@@ -82,7 +82,7 @@ html{scroll-behavior:smooth}
 }
 
 
-/* NewGen hero gallery — three original project photographs. */
+/* Neugen hero gallery — three original project photographs. */
 .hero{background:#171d25}
 .hero .heroSlideImage{
  background-color:#20252d;background-repeat:no-repeat;background-size:cover;

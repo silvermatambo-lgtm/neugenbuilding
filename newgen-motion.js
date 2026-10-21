@@ -134,7 +134,7 @@
     // Delayed custom install prompt. Native install is browser-controlled.
     let installEvent=null;
     const standalone=()=>window.matchMedia("(display-mode: standalone)").matches||window.navigator.standalone===true;
-    window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();installEvent=e;const button=document.getElementById("ngInstallNow");if(button)button.textContent="Install NewGen App";});
+    window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();installEvent=e;const button=document.getElementById("ngInstallNow");if(button)button.textContent="Install Neugen App";});
     window.addEventListener("appinstalled",()=>{sessionStorage.setItem("newgen-installed","1");dismiss()});
     let overlay=null;
     function dismiss(){
@@ -153,11 +153,11 @@
       overlay.className="ng-install-overlay";
       overlay.innerHTML='<div class="ng-install-dialog" role="dialog" aria-modal="true" aria-labelledby="ng-install-title" aria-describedby="ng-install-desc">'+
         '<button type="button" class="ng-install-close" aria-label="Close app installation prompt">×</button>'+
-        '<img class="ng-install-logo" src="/assets/newgen-roof-icon.webp" alt="NewGen Building Solutions logo" width="80" height="80">'+
-        '<span class="ng-install-kicker">NEWGEN BUILDING SOLUTIONS & PROJECTS</span>'+
-        '<h2 id="ng-install-title">Take NewGen with you.</h2>'+
+        '<img class="ng-install-logo" src="/assets/newgen-roof-icon.webp" alt="Neugen Building Solutions logo" width="80" height="80">'+
+        '<span class="ng-install-kicker">NEUGEN BUILDING SOLUTIONS & PROJECTS</span>'+
+        '<h2 id="ng-install-title">Take Neugen with you.</h2>'+
         '<p id="ng-install-desc">Install our website as an app for convenient access on your Android phone, iPhone, or desktop. Quick access to our projects, services and WhatsApp enquiries.</p>'+
-        '<div class="ng-install-options"><button type="button" class="btn" id="ngInstallNow">'+(installEvent?"Install NewGen App":"How to install")+'</button><button type="button" class="ng-install-later">Not now</button></div>'+
+        '<div class="ng-install-options"><button type="button" class="btn" id="ngInstallNow">'+(installEvent?"Install Neugen App":"How to install")+'</button><button type="button" class="ng-install-later">Not now</button></div>'+
         '<div class="ng-install-help" id="ngInstallHelp" hidden></div></div>';
       document.body.appendChild(overlay);
       const dialog=overlay.querySelector(".ng-install-dialog");
